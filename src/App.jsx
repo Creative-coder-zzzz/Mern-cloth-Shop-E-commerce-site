@@ -81,7 +81,7 @@ function App() {
           <Route path="checkout" element={<ShoppingCheckout />} />
         </Route>
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<AuthLogin />} />
         <Route path="unauth-page" element={<UnauthPage />}></Route>
       </Routes>
     </div>
