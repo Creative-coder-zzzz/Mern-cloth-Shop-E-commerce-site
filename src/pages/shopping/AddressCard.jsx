@@ -3,9 +3,17 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@radix-ui/react-dropdown-menu";
 import React from "react";
 
-function AddressCard({ addressInfo, handleDeleteAddress, handleEditAddress }) {
+function AddressCard({
+  addressInfo,
+  handleDeleteAddress,
+  handleEditAddress,
+  setCurrentSelectedAddress,
+}) {
   return (
-    <Card>
+    <Card
+      className=" hover:border-red-300 hover: border-2 "
+      onClick={() => setCurrentSelectedAddress(addressInfo)}
+    >
       <CardContent className="grid gap-4 p-2">
         <Label className="flex">
           <p className="font-semibold ">Address:</p>

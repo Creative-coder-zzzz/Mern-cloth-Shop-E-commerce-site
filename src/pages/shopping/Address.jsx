@@ -19,7 +19,7 @@ const initialAddressFormData = {
   pincode: "",
   notes: "",
 };
-function Address() {
+function Address({ setCurrentSelectedAddress }) {
   const [formData, setFormData] = useState(initialAddressFormData);
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
@@ -119,6 +119,7 @@ function Address() {
                 addressInfo={singleAddressItem}
                 handleDeleteAddress={handleDeleteAddress}
                 handleEditAddress={handleEditAddress}
+                setCurrentSelectedAddress={setCurrentSelectedAddress}
               />
             ))
           : "No Address Added"}
